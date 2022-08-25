@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jueguito calaveras en contra del tiempo</title>
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="overlay" style="visibility: hidden;">
+        <div class="modal modal__win">
+            <h2>Terminaste el juego</h2>
+            <h3>¡Bien hecho!</h3>   
+            <div class="stars">
+                <p>⭐⭐⭐</p> 
+            </div>
+            <div class="puntaje">
+                <p>Puntaje: <span id="puntajeSpanModal"></span></p>
+                <p id="record_mensaje" class="record_mensaje"></p>
+            </div>
+
+            <button class="newGameButton" id="newGameButtonModal">Nuevo juego</button>
+        </div>
+    </div>
+
+    <div class="overlay_fail" style="visibility: hidden;">
+        <div class="modal modal__fail">
+            <div class="skull">
+                <p>☠</p> 
+            </div>
+            <h2>Te has quedado sin vidas!</h2> 
+            <h3>Vuelve a intentarlo</h3>
+
+            <button class="newGameButton" id="resetButtonModal">Reiniciar</button>
+        </div>
+    </div>
+
+
+    <div class="game-container">
+        <canvas id="game"></canvas>
+        <div class="btns">
+            <button id="up">Arriba</button>
+            <button id="left">Izquierda</button>
+            <button id="right">Derecha</button>
+            <button id="down">Abajo</button>
+        </div>
+
+        <div class="content_messages">
+            <div class="messages">
+                <!-- TODO -->
+                <p>Lives: <span id="lives"></span></p>
+                <p>Puntaje: ⏱ <span id="time"></span></p>
+                <p>Récord: ⏱ <span id="record"></span></p>
+            </div>
+    
+            <button class="newGameButton" id="newGame">Reiniciar</button>
+        </div>
+
+    </div>
+
+    <!-- Script -->
+    <script src="./modal.js"></script>
+    <script src="./maps.js"></script>
+    <script src="./game.js"></script>
+</body>
+</html>
